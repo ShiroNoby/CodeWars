@@ -1,0 +1,357 @@
+"" => ""
+"x" => "x"
+
+-------------------------------------
+Rail = 3;
+
+x   *
+ x *
+  *
+
+size < Rail
+//---------------
+
+x   *
+ x *
+  x
+
+size == Rail
+//---------------
+
+ sumCrest
+|---|
+x   *
+ x x
+  x
+size > Rail
+size < sumCrest
+//---------------
+
+  s
+|---|
+x   x
+ x x
+  x
+size > Rail
+size == sumCrest
+//---------------
+
+  s    between
+|---||--|
+x   x   *
+ x x x *
+  x   *
+size > Rail
+size > sumCrest
+size < s + Rail
+//---------------
+
+  s    b
+|---||--|
+x   x   *
+ x x x *
+  x   x
+size > Rail
+size > sumCrest
+size == s + Rail
+//---------------
+
+  s    b
+|---||--|
+x   x   *
+ x x x x
+  x   x
+size > Rail
+size > sumCrest
+size > s + Rail
+size < s + b
+//---------------
+
+  s    b
+|---||--|
+x   x   x
+ x x x x
+  x   x
+size > Rail
+size > sumCrest
+size > s + Rail
+size == s + b
+//---------------
+
+  s    b   b  
+|---||--||--|
+x   x   x   *
+ x x x x x *
+  x   x   *
+size > Rail
+size > sumCrest
+size > s + Rail
+size > s + b(1)
+size < s + b(1) + Rail
+//---------------
+
+  s    b   b   
+|---||--||--|
+x   x   x   *
+ x x x x x *
+  x   x   x
+size > Rail
+size > sumCrest
+size > s + Rail
+size > s + b(1)
+size == s + b(1) + Rail
+//---------------
+
+  s    b   b   
+|---||--||--|
+x   x   x   *
+ x x x x x x
+  x   x   x
+size > Rail
+size > sumCrest
+size > s + Rail
+size > s + b(1)
+size > s + b(1) + Rail
+size < s + b(2)
+//---------------
+
+  s    b   b   
+|---||--||--|
+x   x   x   x
+ x x x x x x
+  x   x   x
+size > Rail
+size > sumCrest
+size > s + Rail
+size > s + b(1)
+size > s + b(1) + Rail
+size == s + b(2)
+//---------------
+
+  s    b   b   b
+|---||--||--||--|
+x   x   x   x   *
+ x x x x x x x *
+  x   x   x   *
+size > Rail
+size > sumCrest
+size > s + Rail
+size > s + b(1)
+size > s + b(1) + Rail
+size > s + b(2)
+size < s + b(2) + Rail
+//---------------
+
+  s    b   b   b
+|---||--||--||--|
+x   x   x   x   *
+ x x x x x x x *
+  x   x   x   x
+size > Rail
+size > sumCrest
+size > s + Rail
+size > s + b(1)
+size > s + b(1) + Rail
+size > s + b(2)
+size == s + b(2) + Rail
+//---------------
+
+  s    b   b   b
+|---||--||--||--|
+x   x   x   x   *
+ x x x x x x x x
+  x   x   x   x
+size > Rail
+size > sumCrest
+size > s + Rail
+size > s + b(1)
+size > s + b(1) + Rail
+size > s + b(2)
+size > s + b(2) + Rail
+size > s + b(3)
+//---------------
+
+  s    b   b   b
+|---||--||--||--|
+x   x   x   x   x
+ x x x x x x x x
+  x   x   x   x
+size > Rail
+size > sumCrest
+size > s + Rail
+size > s + b(1)
+size > s + b(1) + Rail
+size > s + b(2)
+size > s + b(2) + Rail
+size == s + b(3)
+//---------------
+
+[0 - Rail]
+[Rail - Rail]
+[Rail - sumCrest]
+[sumCrest - sumCrest+Rail]
+[sumCrest+Rail - sumCrest + between]
+//val
+[sumCrest + between(val) - sumCrest + between(val) + Rail]
+[sumCrest + between(val) + Rail - sumCrest + between(val + 1)]
+
+-------------------------------------
+Rail = 5;
+
+	s
+|-------|
+x       *
+ x     *
+  *   *
+   * *
+    *
+size < Rail
+//---------------
+
+	s
+|-------|
+x       *
+ x     *
+  x   *
+   x *
+    x
+size == Rail
+//---------------
+
+	s
+|-------|
+x       *
+ x     *
+  x   x
+   x x
+    x
+size > Rail
+size < s
+//---------------
+
+	s
+|-------|
+x       x
+ x     x
+  x   x
+   x x
+    x
+size > Rail
+size == s
+//---------------
+
+	s		 b
+|-------||------|
+x       x       *
+ x     x x     *
+  x   x   *   *
+   x x     * *
+    x       *
+size > Rail
+size > s
+size < s + Rail
+//---------------
+
+	s		 b
+|-------||------|
+x       x       *
+ x     x x     *
+  x   x   x   *
+   x x     x *
+    x       x
+size > Rail
+size > s
+size == s + Rail
+//---------------
+
+	s		 b
+|-------||------|
+x       x       *
+ x     x x     *
+  x   x   x   x
+   x x     x x
+    x       x
+size > Rail
+size > s
+size > s + Rail
+size < s + b
+//---------------
+
+	s		 b
+|-------||------|
+x       x       x
+ x     x x     x
+  x   x   x   x
+   x x     x x
+    x       x
+size > Rail
+size > s
+size > s + Rail
+size == s + b
+//---------------
+
+	s		 b		b
+|-------||------||------|
+x       x       x       *
+ x     x x     x x     *
+  x   x   x   x   x   *
+   x x     x x     * *
+    x       x       *
+size > Rail
+size > s
+size > s + Rail
+size > s + b
+size < s + b + Rail
+//---------------
+
+	s		 b		b
+|-------||------||------|
+x       x       x       *
+ x     x x     x x     *
+  x   x   x   x   x   *
+   x x     x x     x *
+    x       x       x
+size > Rail
+size > s
+size > s + Rail
+size > s + b
+size == s + b + Rail
+//---------------
+
+	s		 b		b
+|-------||------||------|
+x       x       x       *
+ x     x x     x x     x
+  x   x   x   x   x   x
+   x x     x x     x x
+    x       x       x
+size > Rail
+size > s
+size > s + Rail
+size > s + b
+size > s + b + Rail
+size < s + b(2)
+//---------------
+
+	s		 b		b
+|-------||------||------|
+x       x       x       x
+ x     x x     x x     x
+  x   x   x   x   x   x
+   x x     x x     x x
+    x       x       x
+size > Rail
+size > s
+size > s + Rail
+size > s + b
+size > s + b + Rail
+size == s + b(2)
+//---------------
+
+[0 - Rail]
+[Rail - sumCrest]
+[sumCrest - sumCrest+Rail]
+[sumCrest+Rail - sumCrest + between]
+//val
+[sumCrest + between(val) - sumCrest + between(val) + Rail]
+[sumCrest + between(val) + Rail - sumCrest + between(val + 1)]

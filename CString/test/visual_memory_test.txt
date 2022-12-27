@@ -1,0 +1,41 @@
+for(int index = 0; index < 100000; ++index)
+{
+    {
+        CS::Buff buf1(10);
+        CS::Buff buf2(buf1);
+        CS::Buff buf3(std::move(buf2));
+        buf2 = buf1;
+        CS::Buff buf4;
+        buf4 = std::move(buf1);
+        char ch1 = buf2[0];
+        const CS::Buff buf5(buf4);
+        char ch2 = buf5[0];
+        buf2.swap(buf3);
+        buf3.resize(100);
+        buf4.append("hello");
+        buf4.size();
+        buf4.data();
+    }
+
+    {
+        CS::String str1("str1");
+        CS::String str2(10);
+        CS::String str3(str1);
+        CS::String str4(std::move(str2));
+        CS::String str5;
+        str2 = "str2";
+        str5 = str1;
+        str4 = std::move(str1);
+        str1 += 'w';
+        str2 += "str2";
+        str3 += str1;
+        char ch1 = str1[0];
+        const CS::String cstr(12);
+        char ch2 = cstr[0];
+        str1.swap(str2);
+        str5.append("str2");
+        str1.data();
+        str2.c_str();
+        str1.length();
+    }
+}

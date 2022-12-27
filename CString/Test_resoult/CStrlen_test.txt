@@ -1,0 +1,100 @@
+test
+
+test CString() & std::strlen()
+	our data is: []
+	std::strlen( data ) = 0
+	CStrlen( data ) = 0
+
+test CString() & std::strlen()
+	our data is: [ ]
+	std::strlen( data ) = 1
+	CStrlen( data ) = 1
+
+test CString() & std::strlen()
+	our data is: [!]
+	std::strlen( data ) = 1
+	CStrlen( data ) = 1
+
+test CString() & std::strlen()
+	our data is: [hello]
+	std::strlen( data ) = 5
+	CStrlen( data ) = 5
+
+test CalcMemLoc()
+	our size is: 0
+	CS::CalcMemLoc(size) = 10
+
+test CalcMemLoc()
+	our size is: 5
+	CS::CalcMemLoc(size) = 10
+
+test CalcMemLoc()
+	our size is: 10
+	CS::CalcMemLoc(size) = 10
+
+test CalcMemLoc()
+	our size is: 15
+	CS::CalcMemLoc(size) = 20
+
+test explicit Buff(size_t)
+	our size is: [0]
+	Buff size = 10
+	Vuff.m_data = []
+
+test explicit Buff(size_t)
+	our size is: [5]
+	Buff size = 10
+	Vuff.m_data = []
+
+test explicit Buff(size_t)
+	our size is: [10]
+	Buff size = 10
+	Vuff.m_data = []
+
+test explicit Buff(size_t)
+	our size is: [15]
+	Buff size = 20
+	Vuff.m_data = []
+
+
+str1[] str2[]
+	str1 < str2 0
+	str1 > str2 0
+	str1 == str2 1
+	str1 <= str2 1
+	str1 >= str2 1
+
+str1[1] str2[]
+	str1 < str2 0
+	str1 > str2 1
+	str1 == str2 0
+	str1 <= str2 0
+	str1 >= str2 1
+
+str1[] str2[1]
+	str1 < str2 1
+	str1 > str2 0
+	str1 == str2 0
+	str1 <= str2 1
+	str1 >= str2 0
+
+str1[1] str2[1]
+	str1 < str2 0
+	str1 > str2 0
+	str1 == str2 1
+	str1 <= str2 1
+	str1 >= str2 1
+
+str1[11] str2[1]
+	str1 < str2 0
+	str1 > str2 1
+	str1 == str2 0
+	str1 <= str2 0
+	str1 >= str2 1
+
+str1[1] str2[11]
+	str1 < str2 1
+	str1 > str2 0
+	str1 == str2 0
+	str1 <= str2 1
+	str1 >= str2 0

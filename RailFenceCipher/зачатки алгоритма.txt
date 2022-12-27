@@ -1,0 +1,376 @@
+WEAREDISCOVEREDFLEEATONCE => 25
+
+w   e   c   r   l   t   e
+ e r d s o e e f e a o c
+  a   i   v   d   e   n
+
+0126456              012345
+WECRLTE ERDSOEEFEAOC AIVDEN => 25
+1234567 890123456789 012345
+							 5
+3R => R+(R-1) + (R-1 + R-1)(val) = 25
+
+
+WEAREDISCOVEREDFLEEATONCER => 26
+
+w   e   c   r   l   t   e
+ e r d s o e e f e a o c R
+  a   i   v   d   e   n
+  
+0126456               012345
+WECRLTE ERDSOEEFEAOCR AIVDEN => 26
+
+WEAREDISCOVEREDFLEEATONCERE => 27
+
+w   e   c   r   l   t   e
+ e r d s o e e f e a o c R
+  a   i   v   d   e   n   E
+  
+0126456             0123456
+WECRLTEERDSOEEFEAOCRAIVDENE => 27
+
+val = (size - R+(R-1)) / (R-1 + R-1)
+if(size == 3R) val+1 - - val
+if(size == 3R +(R-1)) val+1 - - val+1
+if(R > 3) //
+
+--------------------------------------------------------------
+4R
+
+WEAREDISCOVEREDFLEEATONCE => 25
+
+W     I     R     E     E
+ E   D S   E E   E A   C
+  A E   C V   D L   T N
+   R     O     F     O
+
+01234 01234567 01234567 0123
+WIREE EDSEEEAC AECVDLTN ROFO
+
+
+val = (size - R+(R-1)) / (R-1 + R-1)
+							   3
+4R => (R + R-1) + (R-1 + R-1)(val) == 25
+if(size == 4R) val+1 - - val
+if(size == 4R +(R-1)) val+1 - - val+1
+if(R > 3) //
+
+
+WEAREDISCOVEREDFLEEATONCER => 26
+
+W     I     R     E     E
+ E   D S   E E   E A   C R
+  A E   C V   D L   T N
+   R     O     F     O
+
+01234 012345678 01234567 0123
+WIREE EDSEEEACR AECVDLTN ROFO
+
+
+val = (size - R+(R-1)) / (R-1 + R-1)
+							   3
+4R => (R + R-1) + (R-1 + R-1)(val) == 25
+if(size == 4R) val+1 - - val
+if(size == 4R +(R-1)) val+1 - - val+1
+if(R > 3) 	
+	if(size < 4R +(R-1)) val+1 - - val
+		indStr = size - 4R 					//1 - вторая строка строкаб 2 третья строка
+		val+1 - - val
+	if(size > 4R +(R-1)) val+1 - - val+1
+		indStr = size - 4R +(R-1) 			//2 - вторая строка строкаб 1 третья строка
+		val+1 - - val+1
+		
+---------------------------------------------------------------
+5R
+
+WEAREDISCOVEREDFLEEATONCE => 25
+
+W       C       L       E
+ E     S O     F E     C
+  A   I   V   D   E   N
+   R D     E E     A O
+    E       R       T
+	
+0123 012345 012345 012345 012	
+WCLE ESOFEC AIVDEN RDEEAO ERT
+	
+val = (size - R+(R-1)) / (R-1 + R-1)
+							   2
+5R => (R + R-1) + (R-1 + R-1)(val) == 25
+if(size == 5R) val+1 - - val
+if(size == 5R +(R-1)) val+1 - - val+1
+
+
+//	int val = size / sumBbetween;
+
+---------------------------------------------------------------
+5R
+
+1234567890WEAREDISCOVEREDFLEEATONCE => 35
+
+1       9       I       D       N
+ 2     8 0     D S     E F     O C
+  3   7   W   E   C   R   L   T   E
+   4 6     E R     O E     E A
+    5       A       V       E
+
+01234 012345678 012345678 01234567 0123
+19IDN 280DSEFOC 37WECRLTE 46EROEEA 5AVE
+12345 678901234 567890123 45678901 2345
+
+---------------------------------------------------------------
+10R
+
+1234567890WEAREDISCOVEREDFLEEATONCE => 35
+
+1                 C
+ 2               S O
+  3             I   V             e
+   4           D     E           C
+    5         E       R         N
+     6       R         E       O
+      7     A           D     T
+       8   E             F   A
+        9 W               L E
+         0                 E
+
+01 012 0123 0123 0123 0123 0123 0123 0123 01		 
+1C 2SO 3IVe 4DEC 5ERN 6REO 7ADT 8EFA 9WLE 0E	 
+12 345 6789 0123 4567 8901 2345 6789 0123 45
+
+
+1C 2S O3 IV e4 DE C5 ER N6 RE O7 AD T8 EF A9 WL E0E
+1C 2S O3 IV E4 DE C5 ER N6 RE O7 AD T8 EF A9 WL E0E
+		 
+---------------------------------------------------------------
+20R
+
+1234567890WEAREDISCOVEREDFLEEATONCE => 35
+
+1
+ 2
+  3
+   4
+    5							  E
+     6							 C
+      7							N
+       8					   O
+        9					  T
+         0				     A
+          W				    E
+           E			   E
+		    A			  L
+		     R			 F
+			  E		    D
+			   D       E
+				I     R
+				 S   E
+				  C V
+				   O
+										
+										
+0 0 0 0 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 0
+1 2 3 4 5E 6C 7N 8O 9T 0A WE EE AL RF ED DE IR SE CV O
+1 2 3 4 56 78 90 12 34 56 78 90 12 34 56 78 90 12 34 5
+
+---------------------------------------------------------------
+20R
+
+1234567890WEAREDISCOVEREDFLEEATONCE1234567890 => 45
+
+1									  4
+ 2									 3 5
+  3									2   6
+   4							   1     7
+    5							  E       8
+     6							 C         9
+      7							N           0
+       8					   O
+        9					  T
+         0				     A
+          W				    E
+           E			   E
+		    A			  L
+		     R			 F
+			  E		    D
+			   D       E
+				I     R
+				 S   E
+				  C V
+				   O
+
+
+01 012 012 012 012 012 012 01 01 01 01 01 01 01 01 01 01 01 01 0										
+14 235 326 417 5E8 6C9 7N0 8O 9T 0A WE EE AL RF ED DE IR SE CV O
+12 345 678 901 234 567 890 12 34 56 78 90 12 34 56 78 90 12 34 5	
+
+142353264175E86C97N08O9T0AWEEEALRFEDDEIRSECVO								
+
+---------------------------------------------------------------
+20R
+
+1234567890WEAREDISCOVEREDFLEEATONCE12345678901234567890123 => 58
+
+1									  4
+ 2									 3 5
+  3									2   6
+   4							   1     7
+    5							  E       8
+     6							 C         9
+      7							N           0
+       8					   O			 1
+        9					  T				  2
+         0				     A				   3
+          W				    E					4
+           E			   E					 5
+		    A			  L						  6
+		     R			 F						   7
+			  E		    D							8
+			   D       E							 9
+				I     R								  0
+				 S   E								   1
+				  C V									2
+				   O									 3
+
+
+
+01 012 012 012 012 012 012 012 012 012 012 012 012 012 012 012 012 012 012 01	   
+14 235 326 417 5E8 6C9 7N0 8O1 9T2 0A3 WE4 EE5 AL6 RF7 ED8 DE9 IR0 SE1 CV2 O3
+12 345 678 901 234 567 890 123 456 789 012 345 678 901 234 567 890 123 456 78 
+
+
+1R46F2L73AE55D3E82ED64E4E91WI73R5A0E0S82E6T1C9C91V7O2N8O03
+
+
+---------------------------------------------------------------
+5R
+
+
+*$iAwEz-5_14M3u+_0F+]Kg24Bw>e?T-_]eJ?^]X;j@($xN(&w => 50
+
+*       5       _       4       _       ;       &
+ $     - _     + 0     2 B     - ]     X j     ( w
+  i   z   1   u   F   g   w   T   e   ]   @   N
+   A E     4 3     + K     > ?     J ^     ( x	
+    w       M       ]       e       ?       $
+
+0123456 0123456789012 012345678901 012345678901 012345
+*5_4_;& $-_+02B-]Xj(w iz1uFgwTe]@N AE43+K>?J^(x wM]e?$
+1234567 8901234567890 123456879012 345687901234 568790
+
+---------------------------------------------------------------
+test 22R
+
+8$\dxQf2pK:uz0f@=!2aFNN-0vq[^Rq?fHF-=gF2qgsESfwXz7i6-7\Y(9Va/P(-Ck3\?QQ,I;_&Ig#r4W;K => 84
+
+*
+8                                           S
+ $                                         E f
+  \                                       s   w
+   d                                     g     X
+    x                                   q       z
+     Q                                 2         7                                 K
+	  f                               F           i                               ;
+	   2                             g             6                             W
+	    p                           =               -                           4
+	     K                         -                 7                         r
+	      :                       F                   \                       #
+	       u                     H                     Y                     g
+	        z                   f                       (                   I
+	         0                 ?                         9                 &
+	          f               q                           V                _
+	           @             R                             a              ;
+	            =           ^                               /            I
+	             !         [                                 P          ,
+	              2       q                                   (        Q
+	               a     v                                     -      Q
+	                F   0                                        C   ?
+	                 N -                                          k \
+	                  N                                            3
+* 
+
+
+01 012 012 012 012 0123 0123 0123 0123 0123 0123 0123 0123 0123 0123 0123 0123 0123 0123 0123 0123 0123 01 
+8S $Ef \sw dgX xqz Q27K fFi; 2g6W p=-4 K-7r :F\# uHYg zf(I 0?9& fqV_ @Ra; =^/I ![P, 2q(Q av-Q F0C? N-k\ N3
+12 345 678 901 234 5678 9012 3456 7890 1234 5678 9012 3456 7901 2345 6798 9012 3456 7890 1234 5678 9012 34 
+
+8S$Ef\swdgXxqzQ27KfFi;2g6Wp=-4K-7r:F\#uHYgzf(I0?9&fqV_@Ra;=^/I![P,2q(Qav-QF0C?N-k\N3
+
+
+---------------------------------------------------------------
+test 22R
+
+8\f:f2NqqFFswi\V(3Q_#;r&,\-aY6XE2-?[-a@u2d$xpz=F0^f=qSz-(/C?II4KWg;QkP977fggHRvN!0KQ => 84
+
+*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*
+---------------------------------------------
+13R
+
+5iaR1_XT#N#Lv9$R^_La@]ACb+J4>8y%LneA => 36
+
+*
+5                       b
+ i                     C +
+  a                   A   J
+   R                 ]     4  
+    1               @       >
+     _             a         8
+      X           L           y
+       T         _             %
+        #       ^               L
+         N     R                 n
+          #   $                   e
+           L 9                     A
+            v
+*
+
+01 012 012 012 012 012 012 012 012 012 012 012 0
+5b iC+ aAJ R]4 1@> _a8 XLy T_% #^L NRn #$e L9A v
+12 345 678 901 234 567 890 123 456 789 012 345 6 
+
+
+
+-----------------------------------------------
+9R
+
+
+D9XD/A?8T#l,z:]lY)dkO^]qZrL>wQL> => 32
+
+D               Y
+ 9             l )             >
+  X           ]   d           L
+   D         :     k         Q
+    /       z       O       w
+     A     ,         ^     >
+      ?   l           ]   L
+       8 #             q r 
+        T               Z
+
+
+01 0123 0123 0123 0123 0123 0123 0123 01
+DY 9l)> X]dL D:kQ /zOw A,^> ?l]L 8#qr TZ
+12 3456 7890 1234 5678 9012 3456 7890 12

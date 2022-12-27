@@ -1,0 +1,23 @@
+abcdef
+
+1 abcdef => f
+
+2 abcd ef => fe
+  
+3 abc def => efd
+			 edf
+  abc def => fde
+			 fed 
+			 
+4 ab cdef => defc  
+		       cf 
+			  fce
+			   ec
+			  cef 
+			   fe
+  ab cdef => efcd
+			   dc
+			  cdf
+			   fd
+			  dfc
+			   cf
